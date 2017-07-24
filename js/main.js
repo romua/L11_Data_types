@@ -20,7 +20,7 @@ function pluckByAttribute(arrObj, label) {
 	getTransformedArray(arrObj, function(el){
 		result.push(el[label]);
 	});
-	console.log(result);
+	//console.log(result);
 	return result;
 
 }
@@ -64,6 +64,7 @@ function decypherPhrase(obj, string){
 function getTopNRichestNames(number, arr){
 	var dollars = {B: 1e9, M: 1e6, K: 1e3};
 	var resultArrObj = [];
+
 	var i = 0;
 	var someArr = pluckByAttribute(arr, 'income');
 	var arrOfNames = pluckByAttribute(arr, 'name' );
@@ -81,6 +82,7 @@ function getTopNRichestNames(number, arr){
 		return b.income - a.income;
 	});
 	console.log(resultArrObj.slice(0, number));
+	console.log(pluckByAttribute(resultArrObj.slice(0, number), 'name'));
 }
 
 var charactersMap = {a: 'o', c: 'd', t: 'g'};
