@@ -29,7 +29,7 @@ function cypherPhrase(obj, string){
 	var inputMessage = [];
 	var outputMessage = [];
 	inputMessage = string.split('');
-	console.log(inputMessage);
+	console.log("input message:"+string);
 	var i =0;
 	getTransformedArray(inputMessage, function(el){
 		outputMessage.push(obj[el] || inputMessage[i]);
